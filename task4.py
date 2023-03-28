@@ -17,7 +17,11 @@ def target(lvl,ac):
     file = open(filename,'r')
     data = file.read()
     fList = data.split('\n')
-    print(fList)
+    newList = []
+    for line in fList:
+        tempList = line.split(' ')
+        newList.append(tempList)
+        
     return
 
 
