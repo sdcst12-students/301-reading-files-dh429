@@ -13,6 +13,10 @@ Create a function that reads the specific value for a specific level and an armo
 """
 
 def target(lvl,ac):
+    filename = 'task04.txt'
+    file = open(filename,'r')
+    data = file.read()
+    fList = data.split('\n')
     return
 
 
