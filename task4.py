@@ -17,11 +17,12 @@ def target(lvl,ac):
     file = open(filename,'r')
     data = file.read()
     fList = data.split('\n')
+    print(fList)
     return
 
 
 def tests():
-    assert target(3,7) == 23
+    assert target(3,7) == 12
     assert target(9,-1) == 17
     assert target(13,-10) == 20
 
