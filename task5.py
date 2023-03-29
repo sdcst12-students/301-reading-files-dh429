@@ -13,3 +13,28 @@ Apple Inc.
 Enter stock symbol: YANG
 No matches
 """
+
+filename = "task5.csv"
+file = open(filename,"r")
+data = file.read()
+
+lineData = data.split("\n")
+found = 0
+
+
+symbol = input("Enter a stock symbol: ")
+
+for i in lineData:
+    stocks = i.split(",")
+    if symbol in stocks[0]:
+        found = found + 1
+        if found == 1:
+            first = stocks[1]
+
+if found > 1:
+    print(f"There are {found} stocks with that symbol")
+elif stocks == 1:
+    print(first)
+else:
+    print("No matches")
+
