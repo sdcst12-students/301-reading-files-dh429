@@ -17,12 +17,18 @@ def target(lvl,ac):
     file = open(filename,'r')
     data = file.read()
     fList = data.split('\n')
-    newList = []
+    runLvl = 1
+    
     for line in fList:
-        tempList = line.split(' ')
-        newList.append(tempList)
+        lvlList = line.split(',')
+        if runLvl == lvl:
+            acList = line.split(' ')
+            ac = 10 - ac
+            diceRoll = acList[ac]
+            diceRoll = int(diceRoll)
+        runLvl = runLvl + 1
         
-    return
+    return diceRoll
 
 
 def tests():
